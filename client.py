@@ -44,6 +44,7 @@ font_main = font.Font(None, 36)
 bg_game_image = transform.scale(image.load('ping-pong/pic.jpg'),(WIDTH,HEIGHT))
 bg_wait_image = transform.scale(image.load('ping-pong/pic2.jpg'),(WIDTH,HEIGHT))
 bg_countdown_image = transform.scale(image.load('ping-pong/maoriginalphotog.jpg'),(WIDTH,HEIGHT))
+rotate =1
 # --- ЗВУКИ ---
 
 # --- ГРА ---
@@ -65,7 +66,7 @@ while True:
         display.update()
         continue  # Не малюємо гру до завершення відліку
 
-    if "winner" in game_state and game_state["winner"] is not None:w
+    if "winner" in game_state and game_state["winner"] is not None:
         #screen.fill((20, 20, 20))
         screen.blit(bg_wait_image,(0,0))
         if you_winner is None:  # Встановлюємо тільки один раз
@@ -95,7 +96,11 @@ while True:
         screen.blit(bg_game_image,(0,0))
         draw.rect(screen, (0, 255, 0), (20, game_state['paddles']['0'], 20, 100))
         draw.rect(screen, (255, 0, 255), (WIDTH - 40, game_state['paddles']['1'], 20, 100))
-        draw.circle(screen, (255, 255, 255), (game_state['ball']['x'], game_state['ball']['y']), 10)
+        rotate+=1
+        rotate = 0 if rotate>=360 else rotate
+        rotate_ball = transform.rotate(bg_countdown_image,rotate)
+        screen.blit(rotate_ball,(game_state['ball']['x'], game_state['ball']['y']))
+        #draw.circle(screen, (255, 255, 255), (game_state['ball']['x'], game_state['ball']['y']), 10)
         score_text = font_main.render(f"{game_state['scores'][0]} : {game_state['scores'][1]}", True, (255, 255, 255))
         screen.blit(score_text, (WIDTH // 2 -25, 20))
 
