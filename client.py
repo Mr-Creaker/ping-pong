@@ -2,7 +2,7 @@ from pygame import *
 import socket
 import json
 from threading import Thread
-
+##ffwk evhc
 # ---ПУГАМЕ НАЛАШТУВАННЯ ---
 WIDTH, HEIGHT = 800, 600
 init()
