@@ -3,7 +3,7 @@ import socket
 import json
 from threading import Thread
 # ---ПУГАМЕ НАЛАШТУВАННЯ ---
-
+#wf ednvjck
 #cg
 WIDTH, HEIGHT = 800, 600
 init()
