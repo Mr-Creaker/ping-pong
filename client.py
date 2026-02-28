@@ -3,6 +3,8 @@ import socket
 import json
 from threading import Thread
 # ---ПУГАМЕ НАЛАШТУВАННЯ ---
+
+#cg
 WIDTH, HEIGHT = 800, 600
 init()
 screen = display.set_mode((WIDTH, HEIGHT))
