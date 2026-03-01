@@ -3,8 +3,7 @@ import socket
 import json
 from threading import Thread
 # ---ПУГАМЕ НАЛАШТУВАННЯ ---
-#wf ednvjck
-#cg
+
 WIDTH, HEIGHT = 800, 600
 init()
 screen = display.set_mode((WIDTH, HEIGHT))
@@ -42,7 +41,7 @@ def receive():
 font_win = font.Font(None, 72)
 font_main = font.Font(None, 36)
 # --- ЗОБРАЖЕННЯ ----
-bg = transform.scale(image.load("/ping-pong/pic.jpg"),(WIDTH,HEIGHT))
+#bg = transform.scale(image.load("/ping-pong/pic.jpg"),(WIDTH,HEIGHT))
 # --- ЗВУКИ ---
 
 # --- ГРА ---
