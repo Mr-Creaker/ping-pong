@@ -4,8 +4,7 @@ import json
 from threading import Thread
 import random
 # ---ПУГАМЕ НАЛАШТУВАННЯ ---
-#wf ednvjck
-#cg
+
 WIDTH, HEIGHT = 800, 600
 init()
 screen = display.set_mode((WIDTH, HEIGHT))
@@ -43,10 +42,7 @@ def receive():
 font_win = font.Font(None, 72)
 font_main = font.Font(None, 36)
 # --- ЗОБРАЖЕННЯ ----
-bg_img1 = transform.scale(image.load("/ping-pong/pic.jpg"),(WIDTH,HEIGHT))
-bg_img2 = transform.scale(image.load("/ping-pong/pic.jpg"),(WIDTH,HEIGHT))
-bg = [bg_img1,bg_img2]
-bg = random.choice(bg)
+bg = transform.scale(image.load("/ping-pong/pic.jpg"),(WIDTH,HEIGHT))
 # --- ЗВУКИ ---
 
 # --- ГРА ---
