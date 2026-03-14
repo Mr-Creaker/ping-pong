@@ -42,7 +42,7 @@ def receive():
 font_win = font.Font(None, 72)
 font_main = font.Font(None, 36)
 # --- ЗОБРАЖЕННЯ ----
-bg = transform.scale(image.load("/ping-pong/pic.jpg"),(WIDTH,HEIGHT))
+bg = transform.scale(image.load("D:\LOGICA\СБ16.00\ping-pong\pic2.jpg"),(WIDTH,HEIGHT))
 # --- ЗВУКИ ---
 
 # --- ГРА ---
@@ -51,6 +51,7 @@ winner = None
 you_winner = None
 my_id, game_state, buffer, client = connect_to_server()
 Thread(target=receive, daemon=True).start()
+
 while True:
     for e in event.get():
         if e.type == QUIT:
